@@ -1,0 +1,8 @@
+# Snippet for $HOME/.ssh/config
+
+# VS Code Remote Development
+Host remote_development
+User olaf_walter
+ProxyCommand sh -c "aws --profile kumo-development ssm start-session --target i-0f6e8b87d8f411f0d --document-name AWS-StartSSHSession --parameters 'portNumber=%p'"
+ServerAliveInterval 45
+ServerAliveCountMax 10
