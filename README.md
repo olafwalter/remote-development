@@ -1,3 +1,5 @@
+_Data classification: public. This is a public Github repository_
+
 How to create a remote development environment
 ==============================================
 
@@ -25,7 +27,7 @@ On your local machine, you need the following tools
 Create the Cloud Environment
 ----------------------------
 
-Your central resource will be an EC2 instance. We use terraform to set it up. See the terraform directory in this repo.
+Your central resource will be an EC2 instance. We use terraform to set it up. See the terraform directory in this repo. *Make sure you review and edit all the settings!*
 
 Run it against your temporary AWS account or a dev account.
 
@@ -46,4 +48,11 @@ Configure Visual Code for Remote Development
 Install the extension "remote-ssh" and follow the instructions. You can skip the part "Remote SSH: Add new SSH host" - we have done this already.
 
 With the command "Remote SSH: Connect to Host", a new VS Code windows should open.
+
+TODO
+----
+
+* EC2 Terminate behavior: shutdown, not terminate, so that it's easy to save running costs
+* Script/shell function/alias to list, start, stop EC2 instances using AWS CLI
+* Script/shell function/alias to setup port forwarding
 
