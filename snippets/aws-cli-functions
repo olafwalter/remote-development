@@ -1,0 +1,3 @@
+ec2-list-instances() {
+    aws ec2 describe-instances | jq -r '.Reservations[].Instances[] |  { ID: .InstanceId, State: .State.Name }'
+}
